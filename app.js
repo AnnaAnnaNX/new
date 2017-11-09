@@ -8,6 +8,8 @@ var fs = require('fs');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var input_front_foto = require('./routes/input-front-foto');
+var submit_front_foto = require('./routes/submit-front-foto');
 var input_front = require('./routes/input-front');
 var submit_front = require('./routes/submit-front');
 
@@ -52,10 +54,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/input-front-foto', input_front_foto);
+app.use('/submit-front-foto', submit_front_foto);
 app.use('/input-front', input_front);
 app.use('/submit-front', submit_front);
 
