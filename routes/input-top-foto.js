@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   if (fs.existsSync('./public/images/front-foto')){
     haveFoto = true;
   }
-  res.render('input-front-foto', { title: 'Input front foto', haveFoto: haveFoto});
+  res.render('input-top-foto', { title: 'Input top foto', haveFoto: haveFoto});
 });
 
 module.exports = router;

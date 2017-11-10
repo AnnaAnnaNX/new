@@ -22,10 +22,10 @@ router.post('/', function(req, res, next) {
   data.points.push({x: req.body.x2, y: req.body.y2});
   data.points.push({x: req.body.x3, y: req.body.y3});
   json = JSON.stringify(data); //convert it back to json
-  fs.writeFileSync('points.json', json, 'utf8');
+  fs.writeFileSync('pointsFront.json', json, 'utf8');
 
-
-  res.render('submit-front', { title: 'input front', x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3 });
+  //res.render('submit-front-points', { title: 'input front', x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3 });
+  res.redirect('/');
 });
 
 module.exports = router;

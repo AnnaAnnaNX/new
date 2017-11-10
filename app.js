@@ -10,8 +10,12 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var input_front_foto = require('./routes/input-front-foto');
 var submit_front_foto = require('./routes/submit-front-foto');
-var input_front = require('./routes/input-front');
-var submit_front = require('./routes/submit-front');
+var input_top_foto = require('./routes/input-top-foto');
+var submit_top_foto = require('./routes/submit-top-foto');
+var input_front_points = require('./routes/input-front-points');
+var submit_front_points = require('./routes/submit-front-points');
+var input_top_points = require('./routes/input-top-points');
+var submit_top_points = require('./routes/submit-top-points');
 
 var app = express();
 
@@ -60,8 +64,12 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/input-front-foto', input_front_foto);
 app.use('/submit-front-foto', submit_front_foto);
-app.use('/input-front', input_front);
-app.use('/submit-front', submit_front);
+app.use('/input-top-foto', input_top_foto);
+app.use('/submit-top-foto', submit_top_foto);
+app.use('/input-front-points', input_front_points);
+app.use('/submit-front-points', submit_front_points);
+app.use('/input-top-points', input_top_points);
+app.use('/submit-top-points', submit_top_points);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

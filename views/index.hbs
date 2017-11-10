@@ -1,5 +1,30 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-<a href = '/input-front'>Ввести фронтальные точки</a>
+<div class='header'>
+  <h1>{{title}}</h1>
+</div>
 
+<ul class="main-menu">
+  <li>
+    <a {{#if check.fotoFront}} class="input" {{/if}} href = '/input-front-foto'>Input front foto</a>
+  </li>
+  <li>
+    <a {{#if check.fotoTop}} class="input" {{/if}} href = '/input-top-foto'>Input top foto</a>
+  </li>
+  <li>
+    <a {{#if check.pointsFront}} class="input" {{/if}}  href = '/input-front-points'>Input front points</a>
+  </li>
+  <li>
+    <a {{#if check.pointsTop}} class="input" {{/if}} href = '/input-top-points'>Input top points</a>
+  </li>
+  <li>
+    <a href = '/input-top-poligon-1'>Input polygon #1</a>
+  </li>
+  <li>
+    <a href = '/input-top-poligon-2'>Input polygon #2</a>
+  </li>
+  <li>
+    <a href = '/input-top-poligon-3'>Input polygon #3</a>
+  </li>
+  <input class='exec' type='button' value='Вычислить'></input>
+  <input class='clear' type='button' value='Сброс'></input>
+</ul>
 <img src="./public/images/front-foto">
