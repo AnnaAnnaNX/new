@@ -27,7 +27,10 @@
   <li>
     <a href = '/input-poligon-3'>Input polygon #3</a>
   </li>
-  <input class='exec' type='button' value='Вычислить'></input>
+
+  <form action="/calc" method="post">
+    <input {{#if check.not_all_data }} disabled {{/if}} class='exec' type='submit' value='Вычислить'></input>
+  <form>
   <input class='clear' type='button' value='Сброс'></input>
 </ul>
 <img src="./public/images/front-foto">

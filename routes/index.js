@@ -13,9 +13,9 @@ router.get('/', function(req, res, next) {
     pointsTop: false,
     scale: false,
     oblWhole: false,
-    obl1: false,
-    obl1: false,
-    obl3: false
+    poligon1: false,
+    poligon2: false,
+    poligon3: false
   }
 
   //exist front foto
@@ -110,7 +110,16 @@ router.get('/', function(req, res, next) {
       console.log('poligon2.json does not exist');
   }
 
+  check.not_all_data = !(
+    check.fotoFront &&
+    check.fotoTop &&
+    check.pointsFront &&
+    check.pointsTop &&
+    check.scale &&
+    (check.oblWhole ||
+    check.poligon1));
 
+    //console.log(check.not_all_data);
   res.render('index', { title: 'Main', check: check });
 });
 

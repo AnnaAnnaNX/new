@@ -22,6 +22,7 @@ var input_poligon_1 = require('./routes/input-poligon-1');
 var submit_poligon_1 = require('./routes/submit-poligon-1');
 var input_poligon_2 = require('./routes/input-poligon-2');
 var submit_poligon_2 = require('./routes/submit-poligon-2');
+var calc = require('./routes/calc');
 
 var app = express();
 
@@ -82,6 +83,7 @@ app.use('/input-poligon-1', input_poligon_1);
 app.use('/submit-poligon-1', submit_poligon_1);
 app.use('/input-poligon-2', input_poligon_2);
 app.use('/submit-poligon-2', submit_poligon_2);
+app.use('/calc', calc);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
