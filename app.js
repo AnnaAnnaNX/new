@@ -16,6 +16,12 @@ var input_front_points = require('./routes/input-front-points');
 var submit_front_points = require('./routes/submit-front-points');
 var input_top_points = require('./routes/input-top-points');
 var submit_top_points = require('./routes/submit-top-points');
+var input_scale_points = require('./routes/input-scale-points');
+var submit_scale_points = require('./routes/submit-scale-points');
+var input_poligon_1 = require('./routes/input-poligon-1');
+var submit_poligon_1 = require('./routes/submit-poligon-1');
+var input_poligon_2 = require('./routes/input-poligon-2');
+var submit_poligon_2 = require('./routes/submit-poligon-2');
 
 var app = express();
 
@@ -70,6 +76,12 @@ app.use('/input-front-points', input_front_points);
 app.use('/submit-front-points', submit_front_points);
 app.use('/input-top-points', input_top_points);
 app.use('/submit-top-points', submit_top_points);
+app.use('/input-scale-points', input_scale_points);
+app.use('/submit-scale-points', submit_scale_points);
+app.use('/input-poligon-1', input_poligon_1);
+app.use('/submit-poligon-1', submit_poligon_1);
+app.use('/input-poligon-2', input_poligon_2);
+app.use('/submit-poligon-2', submit_poligon_2);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

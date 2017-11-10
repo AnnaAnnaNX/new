@@ -16,13 +16,16 @@
     <a {{#if check.pointsTop}} class="input" {{/if}} href = '/input-top-points'>Input top points</a>
   </li>
   <li>
-    <a href = '/input-top-poligon-1'>Input polygon #1</a>
+    <a {{#if check.scale}} class="input" {{/if}} href = '/input-scale-points'>Input scale points</a>
   </li>
   <li>
-    <a href = '/input-top-poligon-2'>Input polygon #2</a>
+    <a {{#if check.poligon1}} class="input" {{/if}} href = '/input-poligon-1'>Input polygon #1</a>
   </li>
   <li>
-    <a href = '/input-top-poligon-3'>Input polygon #3</a>
+    <a {{#if check.poligon2}} class="input" {{/if}} href = '/input-poligon-2'>Input polygon #2</a>
+  </li>
+  <li>
+    <a href = '/input-poligon-3'>Input polygon #3</a>
   </li>
   <input class='exec' type='button' value='Вычислить'></input>
   <input class='clear' type='button' value='Сброс'></input>

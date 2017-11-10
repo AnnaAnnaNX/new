@@ -11,8 +11,7 @@ router.get('/', function(req, res, next) {
     fotoTop: false,
     pointsFront:false,
     pointsTop: false,
-    scaleFront: false,
-    scaleTop: false,
+    scale: false,
     oblWhole: false,
     obl1: false,
     obl1: false,
@@ -63,6 +62,53 @@ router.get('/', function(req, res, next) {
       console.log('pointsTop.json does not exist');
   }
 
+  //check scale points
+  if ( fs.existsSync('scale.json') ){
+    console.log('scale exists');
+    data = fs.readFileSync('scale.json', 'utf8');
+    if ( data == '' ){
+      console.log('scale.json have not points');
+    }
+    else{
+      console.log('scale.json have points');
+      check.scale = true;
+    }
+  }
+  else{
+      console.log('scale.json does not exist');
+  }
+
+  //check poligon1 points
+  if ( fs.existsSync('poligon1.json') ){
+    console.log('poligon1 exists');
+    data = fs.readFileSync('poligon1.json', 'utf8');
+    if ( data == '' ){
+      console.log('poligon1.json have not points');
+    }
+    else{
+      console.log('poligon1.json have points');
+      check.poligon1 = true;
+    }
+  }
+  else{
+      console.log('poligon1.json does not exist');
+  }
+
+  //check poligon2 points
+  if ( fs.existsSync('poligon2.json') ){
+    console.log('poligon2 exists');
+    data = fs.readFileSync('poligon2.json', 'utf8');
+    if ( data == '' ){
+      console.log('poligon2.json have not points');
+    }
+    else{
+      console.log('poligon2.json have points');
+      check.poligon2 = true;
+    }
+  }
+  else{
+      console.log('poligon2.json does not exist');
+  }
 
 
   res.render('index', { title: 'Main', check: check });
